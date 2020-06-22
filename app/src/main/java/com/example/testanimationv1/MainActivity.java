@@ -1,12 +1,8 @@
 package com.example.testanimationv1;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
-
-
-
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +10,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity {
-
 
     // константы для ID пунктов меню
     final int MENU_ALPHA_ID = 1;
@@ -31,17 +26,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView1 = (TextView) findViewById(R.id.textView1);
-        // регистрируем контекстное меню для компонента tv
+
         registerForContextMenu(textView1);
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
-        // TODO Auto-generated method stub
+
         switch (v.getId()) {
             case R.id.textView1:
-                // добавляем пункты
+
                 menu.add(0, MENU_ALPHA_ID, 0, "alpha");
                 menu.add(0, MENU_SCALE_ID, 0, "scale");
                 menu.add(0, MENU_TRANSLATE_ID, 0, "translate");
